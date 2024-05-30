@@ -1,503 +1,509 @@
 /* variabler der viser min farvepallette*/
 :root{
-  --universeblack: #071E22;
-  --cloudywhite: #F9F5F0;
-  --myyellow: #EEC956;
-  --hoveryellow: #ffe189;
-  --distance: 6.5%;
-}
-
-/* Gør border og padding til en del af box størrelse, i stedet for at ligge rundt om. 
-En kasse ændrer derfor ikke størrelse når disse lægges til */
-* {
-  box-sizing: border-box;
-}
-
-html{
-  scroll-behavior: smooth;
-}
-
-/* Raleway er skrifttypen som bliver brugt gennem hele hjemmesiden, og er derfor sat som default her. 
-Margin og padding er også sat til 0px, for at overwrite alle default settings*/
-
-body{
-  font-family: 'raleway';
-  margin: 0px;
-  padding: 0px;
-  background-color: var(--cloudywhite);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-h1{
-  font-size: 96px;
-  font-weight: 700;
-  color: var(--myyellow);
-  padding: var(--distance);
-  padding-bottom: 0px;
-  margin: 0px;
-  width: 50%;
-}
-
-h2{
-  font-weight: 500;
-  font-size: 32px;
-}
-
-
-p{
-  padding: 0px var(--distance);
-  font-size: 16pt;
-  font-weight: 400;
-  margin: 0px;
-}
-
-/* De forskellige elementer i headeren bliver stylet og positioneret */
-.covertekst{
-  font-size: 36px;
-  color: var(--cloudywhite);
-  padding-left: var(--distance);
-  padding-top: var(--distance);
-  margin: 0px;
-  width: 50%;
-}
-
-.logo{
-  position: absolute;
-  right: var(--distance);
-  top: var(--distance);
-  max-width: 500px;
-}
-
-header{
-  background-color: var(--universeblack);
-  width: 100%;
-  height: 700px;
-}
-
-
-/* navigationen som computerversion bliver stylet med flexbox, z-index gør at den lægger sig ovenpå alt andet indhold */
-nav{
-  position: sticky;
-  top: 0px;
-  width: 100%;
-  z-index: 10;
-}
-
-nav ul{
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  background-color: var(--myyellow);
-  color: var(--universeblack);
-  font-weight: 500;
-  font-size: 30px;
-  margin: 0px;
-  padding: 10px var(--distance);
-}
-li:hover{
-  background-color: var(--hoveryellow);
-}
-a{
-  color: var(--universeblack);
-  width: 100%;
-}
-
-/* Burgermenuen bliver lavet som en sidebar, som er skjult ved hjælp af media query når skærmen er
- mere end 800px bred. Flex direction bliver sat til column, så navigationen er vertikal i stedet for horisontal */
-
-.sidebar{
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  width: 260px;
-  z-index: 999;
-  display: none;
-  flex-direction:column;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-
-.sidebar li{
-  width: 100%;
-}
-.sidebar a{
-  width: 100%;
-}
-
-
-#about img {
-  width: 50%;
-  height: auto;
-  position: absolute;
-  right: var(--distance);
-  padding: var(--distance);
-  padding-right: 0px;
-}
-
-#about p{
-  width: 50%;
-  margin-bottom: var(--distance);
-}
-
-#about h2{
-  padding: var(--distance);
-  padding-bottom: 20px;
-  margin: 0px;
-}
-
-#projekter h2{
-  margin: var(--distance) auto 20px var(--distance);
-}
-
-/* Galleriets layout bliver først lavet med et grid, der har 7 kolonner og 2 rækker */
-.galleri{
-  height: auto;
-  width: 100%;
-  padding: 0px var(--distance);
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-gap: 5px;
-} 
-
-/* alle div elementers højde bliver sat */
-.galleri > div{
-  height: 350px;
-}
-
-/* de enkelte items bliver sat ind i mit grid, og billederne bliver stylet */
-.item1{
-  grid-column: span 3; 
-}
-.item1:hover{
-  border-width: 4px;
-  border-color: var(--hoveryellow);
-  border-style: solid;
-  filter: saturate(70%);
+    --universeblack: #071E22;
+    --cloudywhite: #F9F5F0;
+    --myyellow: #EEC956;
+    --hoveryellow: #ffe189;
+    --distance: 6.5%;
   }
-
-.item1 img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
   
-}
-
-.item2{
-  grid-column: span 2; 
-}
-
-.item2:hover{
-  border-width: 4px;
-  border-color: var(--hoveryellow);
-  border-style: solid;
-  filter: saturate(70%);
-}
-
-.item2 img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.item3{
-  grid-column: span 2;
-}
-
-.item3:hover{
-  border-width: 4px;
-  border-color: var(--hoveryellow);
-  border-style: solid;
-  filter: saturate(70%);
-}
-
-.item3 img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.item4{
-  grid-column: span 2;
-}
-
-.item4:hover{
-  border-width: 4px;
-  border-color: var(--hoveryellow);
-  border-style: solid;
-  filter: saturate(70%);
-}
-
-.item4 img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-
-.item5{
-  grid-column: span 2;
-}
-
-.item5:hover{
-  border-width: 4px;
-  border-color: var(--hoveryellow);
-  border-style: solid;
-  filter: saturate(70%);
-}
-
-.item5 img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.item6{
-  grid-column: span 3;
-  object-fit: cover;
-}
-
-.item6:hover{
-  border-width: 4px;
-  border-color: var(--hoveryellow);
-  border-style: solid;
-  filter: saturate(70%);
-}
-
-.item6 img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* pop up funktion til hvert item bliver lavet. #modal beskriver hvordan pop uppen ser ud,
- dog bliver den som udgandspunkt ikke vist pga. display:none; */
-#modal {
-  display: none;
-  width: auto;
-  max-width: 600px;
-  height: auto;
-  border:1px solid var(--universeblack);
-  background: var(--cloudywhite);
-  padding: 10px;
-}
-
-/* :target pseudo selector linker id'et til item, og giver mulighed for at style direkte på det item linker til. 
-I dette tilfælde gør display: block; at man nu kan se blokken, og dermed give en pop up effekt.
-Så længe URL'en matcher den som :target er sat på, vil "pop up" blive vist. Derfor, når man trykker på "luk" som skrevet i HTML, 
-vil den forsvinde igen da den linker til Projekter, og URL'en dermed ikke matcher :target længere.
-Z-index gør at den lægger sig ovenpå */
-
-#modal:target {
-  position: absolute;
-  display: block;
-  z-index: 2;
-}
-
-#modal2 {
-  display: none;
-  width: auto;
-  max-width: 600px;
-  height: auto;
-  padding: 10px;
-  border:1px var(--universeblack);
-  background: var(--cloudywhite);
-}
-
-#modal2:target {
-  position: absolute;
-  display: block;
-  z-index: 2;
-}
-
-#modal3 {
-  display: none;
-  width: auto;
-  max-width: 600px;
-  height: auto;
-  padding: 10px;
-  border:1px solid #CCC;
-  background:#EEE;
-}
-
-#modal3:target {
-  position: absolute;
-  display: block;
-  z-index: 2;
-}
-
-#modal4 {
-  display: none;
-  width: auto;
-  max-width: 600px;
-  height: auto;
-  padding: 10px;
-  border:1px solid #CCC;
-  background:#EEE;
-}
-
-#modal4:target {
-  position: absolute;
-  display: block;
-  z-index: 2;
-}
-
-#modal5 {
-  display: none;
-  width: auto;
-  max-width: 600px;
-  height: auto;
-  padding: 10px;
-  border:1px solid #CCC;
-  background:#EEE;
-}
-
-#modal5:target {
-  position: absolute;
-  display: block;
-  z-index: 2;
-}
-
-#modal6 {
-  display: none;
-  width: auto;
-  max-width: 600px;
-  height: auto;
-  padding: 10px;
-  border:1px solid #CCC;
-  background:#EEE;
-}
-
-#modal6:target {
-  position: absolute;
-  display: block;
-  z-index: 2;
-}
-
-/* kontakt section bliver lavet med float, */
-#kontakt img{
-   width: 50%;
-  height: auto;
-  float: left;
-  padding: var(--distance);
- 
-}
-
-/* inline-block gør at denne H2 kan sidde ved siden af andre elementer, samtidig med at dens padding og margin bliver respekteret. */
-#kontakt h2{
-  padding: 0px;
-  margin-top: var(--distance);
-  display: inline-block;
-}
-
-.mail{
-  padding-bottom: var(--distance);
-}
-
-#footer {
-  width: 100%;
-  height: 100px;  
-  background-color: var(--myyellow);
-  margin-top: auto;
-}
-
-
-
-/* Mobil/tablet version, alt bliver lagt ind på én eller to kolonner  */
- @media only screen and (max-width: 1000px){
-   header{
-    height: auto;
-    width: 100%;
+  /* Gør border og padding til en del af box størrelse, i stedet for at ligge rundt om. 
+  En kasse ændrer derfor ikke størrelse når disse lægges til */
+  * {
+    box-sizing: border-box;
+  }
+  
+  html{
+    scroll-behavior: smooth;
+  }
+  
+  /* Raleway er skrifttypen som bliver brugt gennem hele hjemmesiden, og er derfor sat som default her. 
+  Margin og padding er også sat til 0px, for at overwrite alle default settings*/
+  
+  body{
+    font-family: 'raleway';
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--cloudywhite);
+    height: 100%;
     display: flex;
     flex-direction: column;
-  } 
-  .logo{
-    position: static;
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
   }
-
-  /* skriftstørrelse bliver sat ned */
-
+  
   h1{
-    font-size: 64px;
-    width: 100%;
-    padding: 0px var(--distance);
-  }
-  .covertekst{
-    font-size: 32px;
-    width: 100%;
-    padding:var(--distance);
-  }
-
-  #about{
-    display: flex;
-    flex-direction: column;
-  }
-
-  #about img{
-    position: static;
-    margin-right: auto;
-    margin-left: auto;
-    width: 100%;
-    padding: var(--distance);
-    padding-top: 0px;
-    order: 2;
-  }
-  #about p{
-    width: 100%;
-    order: 3;
-  }
-
-  .menu>ul{
-    display: flex;
-    flex-direction: column;
-}
-
-   .galleri{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, 1fr);
-   }
-   .galleri div{
-    width: auto;
-    grid-column: span 1;
-    height: 200px;
-   }
-
-   #kontakt{
-    display: flex;
-    flex-direction: column;
-   }
-   
-   #kontakt h2{
+    font-size: 96px;
+    font-weight: 700;
+    color: var(--myyellow);
     padding: var(--distance);
     padding-bottom: 0px;
-   }
-   #kontakt img{
-    width: 100%;
-    padding: var(--distance);
-    padding-top: 0px;
     margin: 0px;
-   }
-
-   #footer{
-    margin-top: var(--distance);
-   }
-
- /* media queries der gør, at sidebar er væk på større skærme men bliver vist på mindre skærme, og omvendt med den horisontale navigation. */
-   .hide_on_mobile{
-    display: none;
-   }
+    width: 50%;
   }
   
- @media( min-width: 1000px){
-  .hide_on_computer{
-      display: none;
+  h2{
+    font-weight: 500;
+    font-size: 32px;
   }
- }
+  
+  
+  p{
+    padding: 0px var(--distance);
+    font-size: 16pt;
+    font-weight: 400;
+    margin: 0px;
+  }
+  
+  /* De forskellige elementer i headeren bliver stylet og positioneret */
+  .covertekst{
+    font-size: 36px;
+    color: var(--cloudywhite);
+    padding-left: var(--distance);
+    padding-bottom: var(--distance);
+    width: 50%;
+  }
+  
+  .logo{
+    position: absolute;
+    right: var(--distance);
+    top: var(--distance);
+    max-width: 500px;
+  }
+  
+  header{
+    background-color: var(--universeblack);
+    width: 100%;
+    height: auto;
+  }
+  
+  header h1{
+    padding: var(--distance);
+    padding-bottom: 0px;
+    margin: 0px;
+  }
+  
+  
+  /* navigationen som computerversion bliver stylet med flexbox, z-index gør at den lægger sig ovenpå alt andet indhold */
+  nav{
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: var(--myyellow);
+    color: var(--universeblack);
+    font-weight: 500;
+    font-size: 30px;
+    margin: 0px;
+    padding: 10px var(--distance);
+  }
+  li:hover{
+    background-color: var(--hoveryellow);
+  }
+  a{
+    color: var(--universeblack);
+    width: 100%;
+  }
+  
+  /* Burgermenuen bliver lavet som en sidebar, som er skjult ved hjælp af media query når skærmen er
+   mere end 800px bred. Flex direction bliver sat til column, så navigationen er vertikal i stedet for horisontal */
+  
+  .sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 260px;
+    z-index: 999;
+    display: none;
+    flex-direction:column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  
+  .sidebar li{
+    width: 100%;
+  }
+  .sidebar a{
+    width: 100%;
+  }
+  
+  
+  #about img {
+    width: 50%;
+    height: auto;
+    position: absolute;
+    right: var(--distance);
+    padding: var(--distance);
+    padding-right: 0px;
+  }
+  
+  #about p{
+    width: 50%;
+    margin-bottom: var(--distance);
+  }
+  
+  #about h2{
+    padding: var(--distance);
+    padding-bottom: 20px;
+    margin: 0px;
+  }
+  
+  #projekter h2{
+    margin: var(--distance) auto 20px var(--distance);
+  }
+  
+  /* Galleriets layout bliver først lavet med et grid, der har 7 kolonner og 2 rækker */
+  .galleri{
+    height: auto;
+    width: 100%;
+    padding: 0px var(--distance);
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 5px;
+  } 
+  
+  /* alle div elementers højde bliver sat */
+  .galleri > div{
+    height: 350px;
+  }
+  
+  /* de enkelte items bliver sat ind i mit grid, og billederne bliver stylet */
+  .item1{
+    grid-column: span 3; 
+  }
+  .item1:hover{
+    border-width: 4px;
+    border-color: var(--hoveryellow);
+    border-style: solid;
+    filter: saturate(70%);
+    }
+  
+  .item1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+  }
+  
+  .item2{
+    grid-column: span 2; 
+  }
+  
+  .item2:hover{
+    border-width: 4px;
+    border-color: var(--hoveryellow);
+    border-style: solid;
+    filter: saturate(70%);
+  }
+  
+  .item2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .item3{
+    grid-column: span 2;
+  }
+  
+  .item3:hover{
+    border-width: 4px;
+    border-color: var(--hoveryellow);
+    border-style: solid;
+    filter: saturate(70%);
+  }
+  
+  .item3 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .item4{
+    grid-column: span 2;
+  }
+  
+  .item4:hover{
+    border-width: 4px;
+    border-color: var(--hoveryellow);
+    border-style: solid;
+    filter: saturate(70%);
+  }
+  
+  .item4 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  
+  .item5{
+    grid-column: span 2;
+  }
+  
+  .item5:hover{
+    border-width: 4px;
+    border-color: var(--hoveryellow);
+    border-style: solid;
+    filter: saturate(70%);
+  }
+  
+  .item5 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .item6{
+    grid-column: span 3;
+    object-fit: cover;
+  }
+  
+  .item6:hover{
+    border-width: 4px;
+    border-color: var(--hoveryellow);
+    border-style: solid;
+    filter: saturate(70%);
+  }
+  
+  .item6 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* pop up funktion til hvert item bliver lavet. #modal beskriver hvordan pop uppen ser ud,
+   dog bliver den som udgandspunkt ikke vist pga. display:none; */
+  #modal {
+    display: none;
+    width: auto;
+    max-width: 600px;
+    height: auto;
+    border:1px solid var(--universeblack);
+    background-color: var(--cloudywhite);
+    padding: 10px;
+  }
+  
+  /* :target pseudo selector linker id'et til item, og giver mulighed for at style direkte på det item linker til. 
+  I dette tilfælde gør display: block; at man nu kan se blokken, og dermed give en pop up effekt.
+  Så længe URL'en matcher den som :target er sat på, vil "pop up" blive vist. Derfor, når man trykker på "luk" som skrevet i HTML, 
+  vil den forsvinde igen da den linker til Projekter, og URL'en dermed ikke matcher :target længere.
+  Z-index gør at den lægger sig ovenpå */
+  
+  #modal:target {
+    position: absolute;
+    display: block;
+    z-index: 2;
+  }
+  
+  #modal2 {
+    display: none;
+    width: auto;
+    max-width: 600px;
+    height: auto;
+    padding: 10px;
+    border:1px solid var(--universeblack);
+    background-color: var(--cloudywhite);
+  }
+  
+  #modal2:target {
+    position: absolute;
+    display: block;
+    z-index: 2;
+  }
+  
+  #modal3 {
+    display: none;
+    width: auto;
+    max-width: 600px;
+    height: auto;
+    padding: 10px;
+    border:1px solid var(--universeblack);
+    background-color: var(--cloudywhite);
+  }
+  
+  #modal3:target {
+    position: absolute;
+    display: block;
+    z-index: 2;
+  }
+  
+  #modal4 {
+    display: none;
+    width: auto;
+    max-width: 600px;
+    height: auto;
+    padding: 10px;
+    border:1px solid var(--universeblack);
+    background-color: var(--cloudywhite);
+  }
+  
+  #modal4:target {
+    position: absolute;
+    display: block;
+    z-index: 2;
+  }
+  
+  #modal5 {
+    display: none;
+    width: auto;
+    max-width: 600px;
+    height: auto;
+    padding: 10px;
+    border:1px solid var(--universeblack);
+    background-color: var(--cloudywhite);
+  }
+  
+  #modal5:target {
+    position: absolute;
+    display: block;
+    z-index: 2;
+  }
+  
+  #modal6 {
+    display: none;
+    width: auto;
+    max-width: 600px;
+    height: auto;
+    padding: 10px;
+    border:1px solid var(--universeblack);
+    background-color: var(--cloudywhite);
+  }
+  
+  #modal6:target {
+    position: absolute;
+    display: block;
+    z-index: 2;
+  }
+  
+  /* kontakt section bliver lavet med float, */
+  #kontakt img{
+     width: 50%;
+    height: auto;
+    float: left;
+    padding: var(--distance);
+   
+  }
+  
+  /* inline-block gør at denne H2 kan sidde ved siden af andre elementer, samtidig med at dens padding og margin bliver respekteret. */
+  #kontakt h2{
+    padding: 0px;
+    margin-top: var(--distance);
+    display: inline-block;
+  }
+  
+  .mail{
+    padding-bottom: var(--distance);
+  }
+  
+  #footer {
+    width: 100%;
+    height: 100px;  
+    background-color: var(--myyellow);
+    margin-top: auto;
+  }
+  
+  
+  
+  /* Mobil/tablet version, alt bliver lagt ind på én eller to kolonner  */
+   @media only screen and (max-width: 1000px){
+     header{
+      height: auto;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    } 
+    .logo{
+      position: static;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: var(--distance);
+      width: 60%;
+    }
+  
+    /* skriftstørrelse bliver sat ned */
+  
+    h1{
+      font-size: 64px;
+      width: 100%;
+      padding: 0px var(--distance);
+    }
+    .covertekst{
+      font-size: 32px;
+      width: 100%;
+      padding:var(--distance);
+    }
+  
+    #about{
+      display: flex;
+      flex-direction: column;
+    }
+  
+    #about img{
+      position: static;
+      margin-right: auto;
+      margin-left: auto;
+      width: 100%;
+      padding: var(--distance);
+      padding-top: 0px;
+      order: 2;
+    }
+    #about p{
+      width: 100%;
+      order: 3;
+    }
+  
+    .menu>ul{
+      display: flex;
+      flex-direction: column;
+  }
+  
+     .galleri{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(3, 1fr);
+     }
+     .galleri div{
+      width: auto;
+      grid-column: span 1;
+      height: 200px;
+     }
+  
+     #kontakt{
+      display: flex;
+      flex-direction: column;
+     }
+     
+     #kontakt h2{
+      padding: var(--distance);
+      padding-bottom: 0px;
+     }
+     #kontakt img{
+      width: 100%;
+      padding: var(--distance);
+      padding-top: 0px;
+      margin: 0px;
+     }
+  
+     #footer{
+      margin-top: var(--distance);
+     }
+  
+   /* media queries der gør, at sidebar er væk på større skærme men bliver vist på mindre skærme, og omvendt med den horisontale navigation. */
+     .hide_on_mobile{
+      display: none;
+     }
+    }
+    
+   @media( min-width: 1000px){
+    .hide_on_computer{
+        display: none;
+    }
+   }
